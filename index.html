@@ -39,7 +39,14 @@
         document.getElementById(sidx).innerHTML = msg[millisec];
         document.getElementById(sidx).style.backgroundColor = "gray";
 
-        console.log(millisec);
+        // console.log(millisec);
+
+        if(s1 == 0 && s2 == 1 && s3 == 2){
+            document.getElementById("lastmsg").innerHTML = "ハッピー";
+        }
+        else if(s1 != -1 && s2 != -1 && s3 != -1){
+            document.getElementById("lastmsg").innerHTML = "全部滅茶苦茶";
+        }
     }
 
     function start(){
@@ -48,7 +55,7 @@
         document.getElementById("s1").style.backgroundColor = "white";
         document.getElementById("s2").style.backgroundColor = "white";
         document.getElementById("s3").style.backgroundColor = "white";
-        
+        document.getElementById("lastmsg").innerHTML = "";
     }
 
 </script>
@@ -59,4 +66,6 @@
     <button id="s2" onclick="stop(2);" style="display:inline; font-family:Times New Roman; border:3px solid; color:black; font-size:20px; position:absolute; top:150px; left:200px; background-color:white; width:100px; height:100px"> 未来 </button>
     <button id="s3" onclick="stop(3);" style="display:inline; font-family:Times New Roman; border:3px solid; color:black; font-size:20px; position:absolute; top:150px; left:300px; background-color:white; width:100px; height:100px"> a beautiful star </button>    
     <button onclick="start()"> START </button>
+
+    <div id="lastmsg" style="font-size: 50px; position:absolute; top:300px; left:100px;">  </div>
 </body>
